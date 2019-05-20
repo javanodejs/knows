@@ -1,0 +1,25 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /dongle
+spring:
+  profiles:
+    active: druid
+  flyway:
+    enabled: false
+logging:
+  level:
+    root: WARN
+    com.noobie.manage: DEBUG
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+  #file: manage.log
+  #path: logs
+mybatis:
+  mapper-locations: classpath*:mapper/*Mapper.xml
+pagehelper:
+  helper-dialect: postgresql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+
